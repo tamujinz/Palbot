@@ -2,7 +2,7 @@ localPath = scriptPath()
 isTrial = false
 maxTrialTimeout = 3600
 commonLib = loadstring(httpGet("https://raw.githubusercontent.com/AnkuLua/commonLib/master/commonLib.lua"))()
-getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/tamujinz/Palbot/master/version.lua"))
+getNewestVersion = loadstring(httpGet("https://raw.githubusercontent.com/tamujinz/Palbot/Tamujinz-test/version.lua"))
 latestVersion = getNewestVersion()
 currentVersion = dofile(localPath .."version.lua")
 print (currentVersion)
@@ -24,9 +24,9 @@ function automaticUpdates ()
     if currentVersion == latestVersion then
       toast ("You are up to date!")
     else
-      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/master/version.lua", localPath .."version.lua")
-      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/master/Palbot.lua", localPath .."Palbot.lua")
-      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/master/imageupdater.lua", localPath .."imageupdater.lua")
+      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/Tamujinz-test/version.lua", localPath .."version.lua")
+      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/Tamujinz-test/Palbot.lua", localPath .."Palbot.lua")
+      httpDownload("https://raw.githubusercontent.com/tamujinz/Palbot/Tamujinz-test/imageupdater.lua", localPath .."imageupdater.lua")
       scriptExit("You have Updated Palbot!")
     end
   end
